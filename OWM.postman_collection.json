@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "54a9b8ac-cc70-4467-8916-4388c6c68917",
+		"name": "OWM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "air pollution",
+			"item": [
+				{
+					"name": "current air pollution data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution?lat=50&lon=50&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "50"
+								},
+								{
+									"key": "lon",
+									"value": "50"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forecast air pollution data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=50&lon=50&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "50"
+								},
+								{
+									"key": "lon",
+									"value": "50"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historical air pollution data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution/history?lat=508&lon=50&start=1606223802&end=1606482999&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution",
+								"history"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "508"
+								},
+								{
+									"key": "lon",
+									"value": "50"
+								},
+								{
+									"key": "start",
+									"value": "1606223802"
+								},
+								{
+									"key": "end",
+									"value": "1606482999"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "current data by one location",
+			"item": [
+				{
+					"name": "by city id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?id=2172797&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2172797"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by geographic coordinates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "35"
+								},
+								{
+									"key": "lon",
+									"value": "139"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by city name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=London&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "London"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by ZIP code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "zip",
+									"value": "94040,us"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "current weather data for several cities",
+			"item": [
+				{
+					"name": "cities within a rectangle zone",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"box",
+								"city"
+							],
+							"query": [
+								{
+									"key": "bbox",
+									"value": "12,32,15,37,10"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cities in circle",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=10&appid=8c0e69ee40769cd9d2e3152b0b12b192",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"find"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "55.5"
+								},
+								{
+									"key": "lon",
+									"value": "37.5"
+								},
+								{
+									"key": "cnt",
+									"value": "10"
+								},
+								{
+									"key": "appid",
+									"value": "8c0e69ee40769cd9d2e3152b0b12b192"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
